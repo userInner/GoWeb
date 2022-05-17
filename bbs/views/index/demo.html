@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <Link rel="stylesheet" type="text/css" href="static/style/style.css" />
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+</head>
+<body>
+<DIV class="t">
+    <TABLE cellSpacing="0" cellPadding="0" width="100%">
+<!--    模板引擎有待加强-->
+  {{if .}}
+<!--  遍历版块-->
+    <tr class="tr3">
+        <td colspan="4">人事管理</td>
+    </tr>
+    {{range .Topic}}
+    <tr class="tr3">
+        <TD width="5%">&nbsp;</TD>
+        <TH align="left">
+            <IMG src="static/image/board.gif">
+            <A href="list.html">{{.Topic_name}}</A>
+        </TH>
+        <TD align="center">{{.Topic_sum}}</TD>
+        <TH>
+				<SPAN>
+					<A href="detail.html">{{.Boardtopic_lastpost.Title}} </A>
+				</SPAN>
+            <BR/>
+            <SPAN>{{.Topic_post_username}}</SPAN>
+            <SPAN class="gray">{{.Boardtopic_lastpost.Last_post}}</SPAN>
+        </TH>
+    </tr>
+    {{end}}
+  {{end}}
+        </table>
+    </DIV>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登录</title>
+    <Link rel="stylesheet" type="text/css" href="static/style/style.css"/>
+
+    <style>
+        .input{
+            width:300px;
+            margin-left:30px;
+            height:18px;
+        }
+        .txt1{
+            display:inline-block;
+            width:50px;
+            text-align:right;
+        }
+        .div1{
+            margin-top:10px;
+        }
+    </style>
+    <script language="javascript">
+        function check() {
+            if(document.loginForm.uName.value==""){
+                alert("用户名不能为空");
+                return false;
+            }
+            if(document.loginForm.uPass.value==""){
+                alert("密码不能为空");
+                return false;
+            }
+        }
+    </script>
+</HEAD>
+
+<BODY>
+<DIV>
+    <IMG src="static/image/logo.gif">
+</DIV>
+<!--      用户信息、登录、注册        -->
+
+<DIV class="h">
+    您尚未
+    <a href="login.html">登录</a> &nbsp;| &nbsp;
+    <A href="reg.html">注册</A> |
+</DIV>
+
+
+<BR/>
+<!--      导航        -->
+<DIV>
+    &gt;&gt;<B><a href="index.html">论坛首页</a></B>
+</DIV>
+<!--      用户登录表单        -->
+<DIV class="t" style="MARGIN-TOP: 15px" align="center">
+    <FORM name="loginForm" onSubmit="return check()" action="/login" method="post">
+        <div class="div1">
+            <label class="txt1">用户名</label>
+            <INPUT class="input" tabIndex="1"  type="text"      maxLength="20" size="35" name="uName">
+<!--            {{.1}}-->
+            <script>
+                if("{{.}}" == false){
+                    alert("账户或密码不正确");
+                }
+            </script>
+        </div>
+        <div class="div1">
+            <label class="txt1">密码</label>
+            <INPUT class="input" tabIndex="2"  type="password"  maxLength="20" size="40" name="uPass">
+        </div>
+        <br/><INPUT class="btn"  tabIndex="6"  type="submit" value="登 录">
+    </FORM>
+</DIV>
+<!--      声明        -->
+<BR/>
+<CENTER class="gray">2010 HNS 版权所有</CENTER>
+</BODY>
+</HTML>

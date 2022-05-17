@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+    <Link rel="stylesheet" type="text/css" href="static/style/style.css" />
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+</head>
+<body>
+<!--      主体        -->
+<DIV class="t">
+    <TABLE cellSpacing="0" cellPadding="0" width="100%">
+        <TR class="tr2" align="center">
+            <TD colSpan="2">论坛</TD>
+            <TD style="WIDTH: 10%;">主题</TD>
+            <TD style="WIDTH: 30%">最后发表</TD>
+        </TR>
+        <!--       主版块       -->
+
+    </TABLE>
+    <script>
+        $(document).ready(function () {
+            var url1 = "/ShowBoards?board_id=1";
+            var tableHtml = $("table").html().trim()
+            $.get(url1,function(res){
+                tableHtml += res
+                $("table").html(tableHtml)
+            })
+
+        })
+    </script>
+</DIV>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <Link rel="stylesheet" type="text/css" href="static/style/style.css" />
+</head>
+<body>
+<DIV>
+    <img src="static/image/logo.gif">
+</DIV>
+<!--      用户信息、登录、注册        -->
+<DIV class="h">
+    <div>
+        {{if .}}
+            <span>Welcome,用户{{.}} <a href="/logout">注销</a></span>
+        <script>
+            console.log(1);
+        </script>
+        {{else}}
+            <span>您尚未　<a href="login.html">登录</a>
+        &nbsp;  |&nbsp; <A href="reg.html">注册</A> |</span>
+        <script>
+            console.log(2);
+        </script>
+        {{end}}
+
+    </div>
+</DIV>
+</body>
+</html>

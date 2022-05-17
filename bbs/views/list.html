@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+    <Link rel="stylesheet" type="text/css" href="static/style/style.css" />
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+</HEAD>
+
+<BODY>
+
+<div class="head"></div>
+<div class="main"></div>
+<div class="foot"></div>
+
+</BODY>
+<script>
+    $(document).ready(function () {
+        $.ajax({url:"/ReIndexHeadLoad",success:function(result){
+                $(".head").html(result);
+            }});
+        $.ajax({url:"/ListMainLoad",success:function(result){
+                $(".main").html(result);
+            }});
+        $.ajax({url:"/ReIndexFootLoad",success:function(result){
+                $(".foot").html(result);
+            }});
+        // $(".head").load('index/head.html');
+        // $(".foot").load('index/foot.html');
+    })
+</script>
+</HTML>

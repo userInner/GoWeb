@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+    <Link rel="stylesheet" type="text/css" href="../static/style/style.css" />
+</head>
+<body>
+<!--      主体        -->
+<DIV><BR/>
+    <!--      导航        -->
+    <DIV>
+        &gt;&gt;<B><a href="index.html">论坛首页</a></B>&gt;&gt;
+        <B><a href="list.html">C#语言</a></B>
+    </DIV><BR/>
+    <DIV>
+        <FORM name="postForm" onsubmit="return check()" action="/list" method="POST">
+            <INPUT type="hidden" name="boardId" value="4"/>
+            <!--            所在版块-->
+            <INPUT type="hidden" name="topicId" value="1"/>
+            <!--            主题-->
+            <input type="hidden" name="userId" value="1"/>
+            <DIV class="t">
+                <TABLE cellSpacing="0" cellPadding="0" align="center">
+                    <TR>
+                        <TD class="h" colSpan="3"><B>发表帖子</B></TD>
+                    </TR>
+
+                    <TR class="tr3">
+                        <TH width="20%"><B>标题</B></TH>
+                        <TH><INPUT class="input" style="PADDING-LEFT: 2px; FONT: 14px Tahoma" tabIndex="1" size="60" name="title"></TH>
+                    </TR>
+
+                    <TR class="tr3">
+                        <TH vAlign=top>
+                            <DIV><B>内容</B></DIV>
+                        </TH>
+                        <TH colSpan=2>
+                            <DIV>
+                                <span><textarea style="WIDTH: 500px;" name="content" rows="20" cols="90" tabIndex="2" ></textarea></span>
+                            </DIV>
+                            (不能大于:<FONT color="blue">1000</FONT>字)
+                        </TH>
+                    </TR>
+                </TABLE>
+            </DIV>
+
+            <DIV style="MARGIN: 15px 0px; TEXT-ALIGN: center">
+                <INPUT class="btn" tabIndex="3" type="submit" value="提 交">
+                <INPUT class="btn" tabIndex="4" type="reset"  value="重 置">
+            </DIV>
+        </FORM>
+    </DIV>
+</DIV>
+</body>
+</html>
