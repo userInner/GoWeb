@@ -1,0 +1,10 @@
+server:
+  port: 1016
+dataSourse:
+  driverName: mysql
+  port: 3306
+  host: localhost
+  database: vuebbs
+  username: root
+  password: root
+  charset: utf8
